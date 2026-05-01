@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resistor Detection</title>
+</head>
+<body>
+    <h1>Upload a Resistor Image</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" required>
+        <button type="submit">Upload</button>
+    </form>
+
+    {% if result %}
+        <h2>Detected:</h2>
+        <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>
